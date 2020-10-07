@@ -1,0 +1,31 @@
+/* Main - Links all style sheets and defines global custom properties */
+@import "base.css";
+@import "module.css";
+@import "layout.css";
+@import "state.css";
+
+:root {
+	/* Color */
+	--clr-link: #eab75c;
+	--clr-link-visited: #d1a252;
+	--clr-font-primary: #13181b;
+	--clr-font-secondary: #283339;
+	--clr-font-alternative: #f2f2f2;
+	--clr-highlight: #949494;
+	--clr-highlight-secondary: #757575;
+
+	/* Spacing */
+	--space1: 0.25rem;
+	--space2: 0.5rem;
+	--space3: 1rem;
+	--space4: 1.5rem;
+	--space5: 2rem;
+	--space6: 3rem;
+	--space7: 4rem;
+	--space8: 8rem;
+
+	/* Typography */
+	--font-primary: "Montserrat", sans-serif;/* Body */
+	--font-secondary: "Anton", sans-serif; /* Header */
+	--line-height: 1.5;
+}
