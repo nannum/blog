@@ -1,4 +1,4 @@
-/* Base - Defines how components should look in all occurrences */
+/* Base rules - Defaults that define how elements should look in all occurrences */
 :root {
 	font-size: clamp(0.938em, 0.75em + 0.55vw, 1.25em);
 }
@@ -16,6 +16,8 @@ html {
 }
 
 body {
+	background-color: var(--clr-font-primary);
+	height: 100vh;
 	letter-spacing: 0.031rem;
 	line-height: var(--line-height);
 	min-width: 320px;
@@ -69,4 +71,20 @@ p {
 
 ul {
 	padding: 0;
+}
+
+/* Utility Classes */
+.sr-only {
+	border: 0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.paused {
+	animation-play-state: paused;
 }

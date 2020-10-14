@@ -1,1 +1,27 @@
-/* Module - Defines how minor (more discrete) components (e.g. navigation bars, carousels, dialogs and widgets) are layed out */
+/* Module - Defines how modules (e.g. navigation bars, carousels, dialogs and widgets) are layed out on the page*/
+#homepage::before {
+	animation: scale-in 0.7s 0.45s var(--timing-function) forwards;
+	background-attachment: fixed, fixed;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url("../images/bg.jpg");
+	background-position: top left, center center;
+	background-repeat: repeat, no-repeat;
+	background-size: auto, cover;
+	content: '';
+	display: block;
+	height: 100vh;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	transform: scale(1.05);
+	width: 100vw;
+	z-index: -1; }
+
+/* Support for those with Vestibular disorders */
+@media all and (prefers-reduced-motion: reduce) {
+
+	#homepage::before {
+		animation-name: fade-in;
+	}
+
+}
