@@ -17,10 +17,52 @@
 	width: 100vw;
 	z-index: -1; }
 
+.skip-link {
+	align-items: center;
+	background-color: var(--clr-font-alternative);
+	border-radius: 50%;
+	display: flex;
+	flex-flow: column nowrap;
+	height: 3rem;
+	justify-content: center;
+	transition: all 0.3s;
+	width: 3rem;
+}
+
+.skip-link.top {
+	animation: fade-in-up 0.7s 0.9s var(--timing-function) forwards, pulse 1.5s 1.5s var(--timing-function) infinite both;
+	left: calc(50vw - 1.5rem);
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 90vh; }
+	.skip-link.top:hover {
+		animation-play-state: paused; }
+
+.top .skip-link__icon {
+	background: none;
+	fill: var(--clr-font-primary);
+	height: 1.5rem;
+	transform-origin: center bottom;
+	width: 1.5rem;
+}
+
+/* TODO: Remove testing block styles*/
+.test::after {
+	content: "";
+	display: block;
+	height: 300vh;
+	width: 100vw;
+}
+
 /* Support for those with Vestibular disorders */
 @media all and (prefers-reduced-motion: reduce) {
 
 	#homepage::before {
+		animation-name: fade-in;
+	}
+
+	.skip-link {
 		animation-name: fade-in;
 	}
 
