@@ -15,9 +15,10 @@
 	top: 0;
 	transform: scale(1.05);
 	width: 100vw;
-	z-index: -1; }
+	z-index: -1;
+}
 
-.skip-link {
+.icon-button {
 	align-items: center;
 	background-color: var(--clr-font-alternative);
 	border-radius: 50%;
@@ -25,26 +26,52 @@
 	flex-flow: column nowrap;
 	height: 3rem;
 	justify-content: center;
-	transition: all 0.3s;
-	width: 3rem;
-}
+	position: relative;
+	transition: all 0.3s ease-out;
+	width: 3rem; }
+	.icon-button:hover {
+		border: 2px solid var(--clr-font-alternative); }
 
-.skip-link.top {
-	animation: fade-in-up 0.7s 0.9s var(--timing-function) forwards, pulse 1.5s 1.5s var(--timing-function) infinite both;
-	left: calc(50vw - 1.5rem);
-	opacity: 0;
-	overflow: hidden;
+.icon-button::after {
+	border-radius: 50%;
+	content: '';
+	height: 0;
+	left: 50%;
 	position: absolute;
-	top: 90vh; }
-	.skip-link.top:hover {
-		animation-play-state: paused; }
+	top: 50%;
+	transition: all 0.3s ease-out;
+	width: 0%;
+	z-index: -1; }
+	.icon-button:hover::after {
+		height: 3rem;
+		margin: -1.5rem;
+		width: 3rem; }
 
-.top .skip-link__icon {
+.icon {
 	background: none;
 	fill: var(--clr-font-primary);
-	height: 1.5rem;
+	transition: all 0.3s ease-out; }
+	.icon-button:hover .icon {
+		fill: var(--clr-font-alternative); }
+
+.skip-link-top {
+	animation: fade-in-up 0.7s 0.9s var(--timing-function) forwards;
+	left: 50vw;
+	margin-left: -1.5rem;
+	opacity: 0;
+	padding: 0.75rem;
+	position: absolute;
+	top: 90vh; }
+	.skip-link-top:hover {
+		border-color: var(--clr-font-primary); }
+
+.skip-link-top::after {
+	background-color: var(--clr-font-primary);
+}
+
+.skip-link-top .icon {
+	animation: 1s 2s bounce linear infinite;
 	transform-origin: center bottom;
-	width: 1.5rem;
 }
 
 /* TODO: Remove testing block styles*/
@@ -62,7 +89,7 @@
 		animation-name: fade-in;
 	}
 
-	.skip-link {
+	.skip-link-top {
 		animation-name: fade-in;
 	}
 

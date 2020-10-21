@@ -1,9 +1,11 @@
 (() => {
 //Ends and triggers animations when the top of the page is in view. 
-	const skipLink = document.querySelector('.skip-link.top');
+	const skipLink = document.querySelector('.skip-link-top .icon');
 	const config = {
 		root: null,
-		rootMargin: '150px 0px 0px 0px',
+		// TODO: remove testing rootMargin, used to see if animation is actually stopped
+		// rootMargin: '-150px',
+		rootMargin: '125px 0px 0px 0px',
 		threshold: 0
 	};
 
