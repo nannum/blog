@@ -2,7 +2,6 @@
 @import "base.css";
 @import "module.css";
 @import "layout.css";
-@import "state.css";
 
 :root {
 	/* Color */
@@ -30,10 +29,10 @@
 	--line-height: 1.5;
 
 	/* Animation Timing Functions*/
---timing-function: cubic-bezier(0.6, 0.14, 0.25, 1);
+	--timing-function: cubic-bezier(0.6, 0.14, 0.25, 1);
 }
 
-/* Animation */
+/* Animations */
 @keyframes scale-in {
 	from {
 		opacity: 0;
@@ -68,20 +67,24 @@
 	}
 }
 
-@keyframes pulse {
+@keyframes bounce {
 	from {
-
+		transform: translate3d(0, 0, 0);
 	}
 
-	1% {
-		transform: scale3d(1, 1, 1);
+	25% {
+		transform: translate3d(0, -5px, 0);
 	}
 
 	50% {
-		transform: scale3d(1.15, 1.15, 1.15);
+		transform: translate3d(0, 0, 0);
+	}
+
+	75% {
+	 transform: translate3d(0, 5px, 0);
 	}
 
 	to {
-		transform: scale3d(1, 1, 1);
+		transform: translate3d(0, 0, 0);
 	}
-}
+ }
