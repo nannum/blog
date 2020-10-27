@@ -1,6 +1,6 @@
 /* Module - Defines how modules (e.g. navigation bars, carousels, dialogs and widgets) are layed out on the page*/
 #homepage::before {
-	animation: scale-in 0.7s 0.45s var(--timing-function) forwards;
+	animation: scale-in 0.7s 0.45s var(--page-load-timing-function) forwards;
 	background-attachment: fixed, fixed;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url("../images/bg.jpg");
 	background-position: top left, center center;
@@ -18,60 +18,70 @@
 	z-index: -1;
 }
 
-.icon-button {
+.skip-link {
 	align-items: center;
-	background-color: var(--clr-font-alternative);
+	background: rgba(255, 255, 255, 0.5) center no-repeat;
 	border-radius: 50%;
+	box-shadow: none;
 	display: flex;
 	flex-flow: column nowrap;
 	height: 3rem;
 	justify-content: center;
-	position: relative;
-	transition: all 0.3s ease-out;
+	padding: 0.75rem;
+	position: absolute;
+	overflow: hidden;
+	transition: box-shadow 0.3s var(--skip-link-timing-function), background-color 0.1s linear;
 	width: 3rem; }
-	.icon-button:hover {
-		border: 2px solid var(--clr-font-alternative); }
+	.skip-link:hover {
+		background-color: transparent;
+		box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.16);
+	}
 
-.icon-button::after {
+.skip-link::after {
+	background-color: var(--clr-font-primary);
 	border-radius: 50%;
 	content: '';
-	height: 0;
-	left: 50%;
+	display: block;
+	height: 100%;
+	left: 0;
 	position: absolute;
-	top: 50%;
-	transition: all 0.3s ease-out;
-	width: 0%;
-	z-index: -1; }
-	.icon-button:hover::after {
-		height: 3rem;
-		margin: -1.5rem;
-		width: 3rem; }
+	transform: scale3d(0, 0, 0);
+	transition: all 0.3s var(--skip-link-timing-function);
+	top: 0;
+	width: 100%; }
+	.skip-link:hover::after {
+		transform: scale3d(1, 1, 1); }
 
-.icon {
-	background: none;
-	fill: var(--clr-font-primary);
-	transition: all 0.3s ease-out; }
-	.icon-button:hover .icon {
-		fill: var(--clr-font-alternative); }
-
-.skip-link-top {
-	animation: fade-in-up 0.7s 0.9s var(--timing-function) forwards;
+.skip-link.top {
+	animation: fade-in-up 0.7s 0.9s var(--page-load-timing-function) forwards;
+	bottom: 5vh;
 	left: 50vw;
 	margin-left: -1.5rem;
 	opacity: 0;
-	padding: 0.75rem;
-	position: absolute;
-	top: 90vh; }
-	.skip-link-top:hover {
-		border-color: var(--clr-font-primary); }
-
-.skip-link-top::after {
-	background-color: var(--clr-font-primary);
 }
 
-.skip-link-top .icon {
-	animation: 1s 2s bounce linear infinite;
-	transform-origin: center bottom;
+.skip-link.bottom {
+	bottom: 5vh;
+	position: fixed;
+	right: 5vw;
+}
+
+.icon.chevron-up,
+.icon.chevron-down {
+	background: none;
+	fill: var(--clr-font-primary);
+	transition: fill var(--skip-link-timing-function);
+	z-index: 1; }
+	.skip-link:hover .icon.chevron-up,
+	.skip-link:hover .icon.chevron-down {
+		fill: var(--clr-font-alternative); }
+
+.skip-link.top:hover .icon.chevron-down {
+	animation: down-back 0.60s var(--skip-link-timing-function);
+}
+
+.skip-link.bottom:hover .icon.chevron-up {
+	animation: up-back 0.60s var(--skip-link-timing-function);
 }
 
 /* TODO: Remove testing block styles*/
