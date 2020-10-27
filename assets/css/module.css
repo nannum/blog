@@ -1,6 +1,6 @@
 /* Module - Defines how modules (e.g. navigation bars, carousels, dialogs and widgets) are layed out on the page*/
 #homepage::before {
-	animation: scale-in 0.7s 0.45s var(--page-load-timing-function) forwards;
+	animation: scale-in 0.7s 0.45s var(--page-load-timing) forwards;
 	background-attachment: fixed, fixed;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url("../images/bg.jpg");
 	background-position: top left, center center;
@@ -30,7 +30,7 @@
 	padding: 0.75rem;
 	position: absolute;
 	overflow: hidden;
-	transition: box-shadow 0.3s var(--skip-link-timing-function), background-color 0.1s linear;
+	transition: box-shadow 0.3s var(--skip-link-timing), background-color 0.1s linear;
 	width: 3rem; }
 	.skip-link:hover {
 		background-color: transparent;
@@ -46,14 +46,14 @@
 	left: 0;
 	position: absolute;
 	transform: scale3d(0, 0, 0);
-	transition: all 0.3s var(--skip-link-timing-function);
+	transition: all 0.3s var(--skip-link-timing);
 	top: 0;
 	width: 100%; }
 	.skip-link:hover::after {
 		transform: scale3d(1, 1, 1); }
 
 .skip-link.top {
-	animation: fade-in-up 0.7s 0.9s var(--page-load-timing-function) forwards;
+	animation: fade-in-up 0.7s 0.9s var(--page-load-timing) forwards;
 	bottom: 5vh;
 	left: 50vw;
 	margin-left: -1.5rem;
@@ -64,27 +64,28 @@
 	bottom: 5vh;
 	position: fixed;
 	right: 5vw;
+	transform: translate3d(0, 300px, 0);
 }
 
 .icon.chevron-up,
 .icon.chevron-down {
 	background: none;
 	fill: var(--clr-font-primary);
-	transition: fill var(--skip-link-timing-function);
+	transition: fill var(--skip-link-timing);
 	z-index: 1; }
 	.skip-link:hover .icon.chevron-up,
 	.skip-link:hover .icon.chevron-down {
 		fill: var(--clr-font-alternative); }
 
 .skip-link.top:hover .icon.chevron-down {
-	animation: down-back 0.60s var(--skip-link-timing-function);
+	animation: down-back 0.60s var(--skip-link-timing);
 }
 
 .skip-link.bottom:hover .icon.chevron-up {
-	animation: up-back 0.60s var(--skip-link-timing-function);
+	animation: up-back 0.60s var(--skip-link-timing);
 }
 
-/* TODO: Remove testing block styles*/
+/* TODO: Remove testing block styles */
 .test::after {
 	content: "";
 	display: block;
@@ -94,7 +95,6 @@
 
 /* Support for those with Vestibular disorders */
 @media all and (prefers-reduced-motion: reduce) {
-
 	#homepage::before {
 		animation-name: fade-in;
 	}
@@ -103,4 +103,8 @@
 		animation-name: fade-in;
 	}
 
+	.skip-link.top:hover .icon.chevron-down,
+	.skip-link.bottom:hover .icon.chevron-up {
+		animation-name: none;
+	}
 }
