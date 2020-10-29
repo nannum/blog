@@ -26,9 +26,10 @@
 	/* Typography */
 	--font-primary: "Montserrat", sans-serif;/* Body */
 	--font-secondary: "Anton", sans-serif; /* Header */
-	--line-height: 1.5;
+	--line-height: 1.75;
 
 	/* Animation Timing Functions*/
+	--nav-link-timing: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 	--page-load-timing: cubic-bezier(0.6, 0.14, 0.25, 1);
 	--skip-link-timing: cubic-bezier(0.55, 0, 0.1, 1);
 }

@@ -1,1 +1,38 @@
 /* Layout rules - Divides the page into sections and defines how elements are layed out on the page */
+.page-header {
+	align-items: start;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto; 
+	justify-items: center;
+	row-gap: var(--space4); }
+	@media all and (min-width: 750px) {
+		.page-header {
+			align-items: center;
+			grid-template-areas:
+				"logo nav"
+				"intro intro";
+			grid-template-columns: 1fr 1fr;
+			row-gap: var(--space3);
+		}
+
+		.logo__container {
+			grid-area: logo;
+			justify-self: start;
+		}
+
+		.nav {
+			grid-area: nav;
+			justify-self: end;
+		}
+
+		.intro {
+			grid-area: intro;
+			justify-self: start; }
+	}
+
+.nav {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+}
