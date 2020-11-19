@@ -47,10 +47,6 @@ All content taken from [Wikitravel](https://wikitravel.org/en/Main_Page)
 - [Yellowstone National Park](https://wikitravel.org/en/Yellowstone_National_Park)
 - [Rocky Mountain National Park](https://wikitravel.org/en/Rocky_Mountain_National_Park)
 
-### Animation \(Bounce\)
-
-- [Animate.css](https://animate.style/) by [Daniel Eden](https://daneden.me/) and [friends](https://animate.style/#contributors)
-
 ## License:
 
 - Travel Blog Project is licensed under [CC BY](https://creativecommons.org/licenses/by/3.0/)

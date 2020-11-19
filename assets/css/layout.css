@@ -1,22 +1,22 @@
-/* Layout rules - Divides the page into sections and defines how elements are layed out on the page */
-.page-header {
+/* Layout rules - Divides the page into sections and defines how components are layed out on the page */
+.header--homepage {
 	align-items: start;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto; 
+	grid-template-rows: auto;
 	justify-items: center;
-	row-gap: var(--space4); }
+	row-gap: var(--space5); }
 	@media all and (min-width: 750px) {
-		.page-header {
+		.header--homepage {
 			align-items: center;
 			grid-template-areas:
 				"logo nav"
 				"intro intro";
 			grid-template-columns: 1fr 1fr;
-			row-gap: var(--space3);
+			row-gap: var(--space2);
 		}
 
-		.logo__container {
+		.logo {
 			grid-area: logo;
 			justify-self: start;
 		}
@@ -28,8 +28,7 @@
 
 		.intro {
 			grid-area: intro;
-			justify-self: start; }
-	}
+			justify-self: start; } }
 
 .nav {
 	display: flex;
