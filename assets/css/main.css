@@ -1,7 +1,7 @@
-/* Main - Links all style sheets*/
-@import "normalize.css";
-@import "config.css";
-@import "base.css";
-@import "component.css";
-@import "layout.css";
-@import "state.css";
+/* Links all style sheets */
+@import url(normalize.css);
+@import url(config.css);
+@import url(base.css);
+@import url(component.css);
+@import url(layout.css);
+@import url(state.css);

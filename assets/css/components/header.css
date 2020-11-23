@@ -1,3 +1,4 @@
+/* Defines all header styles and the styles of the elements contained within */
 .header {
 	padding: var(--space4) 0 0;
 }
@@ -21,6 +22,9 @@
 
 .nav {
 	animation: fade-in-up 1s 0.75s var(--timing-page-load) forwards;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
 	opacity: 0;
 }
 

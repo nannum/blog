@@ -1,4 +1,4 @@
-/* Layout rules - Divides the page into sections and defines how components are layed out on the page */
+/* Divides the page into sections and defines how major components are layed out on the page */
 .header--homepage {
 	align-items: start;
 	display: grid;
@@ -30,8 +30,72 @@
 			grid-area: intro;
 			justify-self: start; } }
 
-.nav {
+.card {
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
+	flex-flow: column nowrap; }
+	@media all and (min-width: 1000px) {
+		.card {
+			flex-direction: row; } }
+
+.card-content {
+	align-content: center;
+	align-items: center;
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: 1fr 72px repeat(6, 1fr); }
+	@media all and (min-width: 1000px) {
+		.card-content {
+			flex-basis: 50vw;
+		}
+
+		.card--alt .card-content {
+			order: 2; } }
+
+.card-title {
+	grid-column: 2/span 6;
+	grid-row: 1/2;
 }
+
+.card-author-avatar {
+	grid-column: 2/3;
+	grid-row: 2/span 3;
+}
+
+.card-author {
+	grid-column: 3/span 4;
+	grid-row: 2/3;
+}
+
+.card-date {
+	grid-column: 3/span 3;
+	grid-row: 3/4;
+}
+
+.card-read-time {
+	grid-column: 3/span 3;
+	grid-row: 4/5;
+}
+
+.card-teaser {
+	grid-column: 2/span 6;
+	grid-row: 5/6;
+}
+
+.card-metadata {
+	grid-column: 2/span 3;
+	grid-row: 6/7;
+}
+
+.card-cta {
+	grid-column: 1/span 8;
+	grid-row: 7/8; }
+	@media all and (min-width: 450px) {
+		.card-cta {
+			grid-column: 2/span 3; } }
+
+.card-thumbnail {
+	order: -1; }
+	@media all and (min-width: 1000px) {
+		.card-thumbnail {
+			flex-basis: 50vw; 
+			order: unset; } }

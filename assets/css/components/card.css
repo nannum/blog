@@ -1,0 +1,109 @@
+/* Defines all card styles and the styles of the elements contained within */
+@media all and (min-width: 1000px) {
+	.card {
+		height: 100vh; }
+}
+
+.card-deck {
+	background-color: var(--clr-white);
+}
+
+.card-title {
+	font-size: calc(1rem + 7vw);
+	font-weight: 600; }
+	@supports (font-size: clamp(3.157rem, 1rem + 7vw, 7.478rem)) {
+		.card-title {
+			font-size: clamp(2.369rem, 1rem + 4vw, 4.20rem); } }
+			/* font-size: clamp(2.369rem, 1rem + 7vw, 4.20rem); } } */
+
+.card-author-avatar {
+	border-radius: 50%;
+	height: 72px;
+	width: 72px;
+}
+
+.card-author,
+.card-date,
+.card-read-time {
+	font-family: var(--font-termina);
+	padding-left: 5px;
+}
+
+.card-author {
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.card-date,
+.card-read-time {
+	color: var(--clr-grey);
+}
+
+.card-teaser {
+	margin-top: 1rem;
+}
+
+.card-cta {
+	position: relative;
+}
+
+.card-cta .button-content {	
+	display: inline-block;
+	transition: all 0.45s var(--timing-button);
+	/* FIX for Firefox  Bug 739176 - No sub-pixel rendering while transitioning translate transforms.
+	Bug causes jerky transition on the button's translate.
+	See https://bugzilla.mozilla.org/show_bug.cgi?id=739176 for further info. */
+	filter: blur(0px);
+	transform: translate3d(0, 0, 0);
+}
+
+.card-cta:hover .button-content {
+	transform: translate3d(-0.25rem, 0, 1px);
+}
+
+.card-cta .button-icon {
+	line-height: var(--line-height);
+	margin-top: -0.06rem;
+	opacity: 0;
+	position: absolute;
+	transform: translate3d(-0.25rem, 0, 1px);
+	transition: all 0.45s var(--timing-button);
+}
+
+.card-cta:hover .button-icon {
+	opacity: 1;
+	transform: translate3d(0.25rem, 0, 1px);
+}
+
+.card-metadata {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	list-style: none;
+	margin: 0 0 var(--space5);
+}
+
+.metadata-item {
+	margin-right: var(--space4);
+	font-variant-numeric: lining-nums; }
+	.metadata-item:last-child {
+		margin-right: 0; }
+
+.metadata-item .far {
+	color: var(--clr-gold);
+}
+
+.card-thumbnail {
+	overflow: hidden;
+}
+
+.thumbnail {
+	height: 100%;
+	object-fit: cover;
+	transform: scale3d(1.04, 1.04, 1);
+	transition: 1s cubic-bezier(0.17, 0.59, 0.05, 0.96);
+}
+
+.card-thumbnail:hover .thumbnail {
+	transform: scale3d(1.01, 1.01, 1);
+}

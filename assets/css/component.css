@@ -1,8 +1,8 @@
-/* Module - Defines how modules (e.g. navigation bars, carousels, dialogs and widgets) are layed out on the page*/
-@import "components/header.css";
-@import "components/card.css";
-@import "components/article.css";
-@import "components/footer.css";
+/* Defines how the reusable and modular components (e.g. navigation bars, carousels, dialogs and widgets) are layed out on the page */
+@import url(components/header.css);
+@import url(components/card.css);
+@import url(components/article.css);
+@import url(components/footer.css);
 
 .homepage::before {
 	animation: scale-in 0.7s 0.45s var(--timing-page-load) forwards;
@@ -84,11 +84,62 @@
 		fill: var(--clr-white); }
 
 .skip-link--top:hover .icon--chevron-down {
-	animation: slide-down-back 0.60s var(--timing-skip-link);
+	animation: slide-down-back 0.60s 0.25s var(--timing-skip-link);
 }
 
 .skip-link--bottom:hover .icon--chevron-up {
-	animation: slide-up-back 0.60s var(--timing-skip-link);
+	animation: slide-up-back 0.60s 0.25s var(--timing-skip-link);
+}
+
+/* Utility Classes */
+.button {
+	background-color: var(--clr-gold);
+	color: var(--clr-blue);
+	display: inline-block;
+	font-family: var(--font-termina);
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	padding: 1rem var(--space4) 0.75rem;
+	transition: all 0.45s var(--timing-button);
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase; }
+	.button:hover {
+		background-color: #f7c060; }
+
+.container {
+	margin: 0 auto;
+	max-width: 85rem;
+	min-width: 320px;
+	width: 90vw;
+}
+
+.slide-in {
+	animation: slide-in 0.6s cubic-bezier(0.230, 1, 0.32, 1) forwards;
+}
+
+.slide-out {
+	animation: slide-out 0.45s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
+}
+
+.text--small {
+	font-size: 0.75rem; /* Perfect 4th scale 1.333 ratio - 12px */
+}
+
+.text--smallest {
+	font-size: 0.563rem; /* Perfect 4th scale 1.333 ratio - 9px */
+}
+
+.sr-only {
+	border: 0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 /* Support for those with Vestibular disorders */
