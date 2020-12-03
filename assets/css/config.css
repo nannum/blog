@@ -4,27 +4,36 @@
 	--clr-black: #13181b;
 	--clr-blue: #283339;
 	--clr-gold: #eab75c;
-	--clr-grey: #727372;
+	--clr-gold-light: #ffcf7d;
+	--clr-grey: #757575;
+	--clr-grey-light: #f2f2f2;
 	--clr-white: #fff;
 
 	/* Spacing */
-	--space1: 0.25rem; /* 4px */
-	--space2: 0.5rem; /* 8px */
-	--space3: 1rem; /* 16px */
-	--space4: 1.5rem; /* 24px */
-	--space5: 2rem; /* 32px */
-	--space6: 3rem; /* 48px */
-	--space7: 4rem; /* 64px */
-	--space8: 8rem; /* 128px */
+	--space-1: 0.25rem; /* 4px */
+	--space-2: 0.5rem; /* 8px */
+	--space-3: 1rem; /* 16px */
+	--space-4: 1.5rem; /* 24px */
+	--space-5: 2rem; /* 32px */
+	--space-6: 3rem; /* 48px */
+	--space-7: 4rem; /* 64px */
+	--space-8: 8rem; /* 128px */
 
 	/* Typography */
-	--font-anton: anton;
-	--font-freight: freight-big-pro;
-	--font-gibson: canada-type-gibson;
-	--font-montserrat: montserrat;
-	--font-termina: termina;
-	--font-size: clamp(0.938em, 0.75em + 0.45vw, 1.25em);
+	--font-primary: freight-big-pro, 'Scope One', 'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif;
+	--font-secondary: canada-type-gibson, Anton, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	--font-tertiary: termina, Montserrat, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 	--line-height: 1.75;
+	/* Modular Scale - Perfect 4th scale 1.333 ratio */
+	--preferred: calc(1rem + 7vw);
+	--step--2: clamp(0.5625rem, 0.4213rem + 0.3767vw, 0.7038rem);
+	--step--1: clamp(0.75rem, 0.5625rem + 0.5vw, 0.9375rem);
+	--step-0: clamp(1rem, 0.75rem + 0.6667vw, 1.25rem);
+	--step-1: clamp(1.3331rem, 1rem + 0.8883vw, 1.6663rem);
+	--step-2: clamp(1.7769rem, 1.3325rem + 1.185vw, 2.2213rem);
+	--step-3: clamp(2.369rem, var(--preferred), 3.157rem);
+	--step-4: clamp(3.157rem, var(--preferred), 4.209rem);
+	--step-5: clamp(4.209rem, var(--preferred), 5.61rem);
 
 	/* Animation Timing Functions*/
 	--timing-button: cubic-bezier(0.25, 1, 0.33, 1);

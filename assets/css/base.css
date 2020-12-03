@@ -1,8 +1,4 @@
 /* Defaults that define how elements should look in all occurrences */
-:root {
-	font-size: var(--font-size);
-}
-
 *,
 *::before,
 *::after {
@@ -16,13 +12,16 @@ html {
 
 body {
 	background-color: var(--clr-black);
-	font-family: var(--font-freight);
+	font-family: var(--font-primary);
+	font-size: calc(0.75rem + 0.6667vw);
 	height: 100vh;
 	letter-spacing: 0.031rem;
 	line-height: var(--line-height);
 	margin: 0;
-	min-width: 320px;
-}
+	min-width: 320px; }
+	@supports (font-size: clamp(1rem, 1rem + 1vw, 1rem)) {
+		body {
+			font-size: var(--step-0); } }
 
 a {
 	color: var(--clr-gold);
@@ -39,8 +38,8 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: var(--font-gibson);
-	font-weight: 700;
+	font-family: var(--font-secondary);
+	font-weight: 600;
 	letter-spacing: 0.025em;
 	line-height: 1.3;
 	margin: 3rem 0 1.38rem;
@@ -49,25 +48,31 @@ h4 {
 }
 
 h1 {
-	font-size: 5.61rem; /* Perfect 4th scale 1.333 ratio - 89.76px */
-	margin-top: 0;
-}
+	font-size: var(--preferred);
+	margin-top: 0; }
+	@supports (font-size: clamp(1rem, 1rem + 1vw, 1rem)) {
+		h1 {
+			font-size: var(--step-5) } }
 
 h2 {
-	font-size: 4.209rem; /* Perfect 4th scale 1.333 ratio - 67.34px */
-}
+	font-size: var(--preferred); }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+		h2 {
+			font-size: var(--step-4); } }
 
 h3 {
-	font-size: 3.157rem; /* Perfect 4th scale 1.333 ratio - 50.52px */
-}
+	font-size: var(--preferred); }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+		h3 {
+			font-size: var(--step-3); } }
 
 h4 {
-	font-size: 2.369rem; /* Perfect 4th scale 1.333 ratio - 37.90px */
-	letter-spacing: normal;
-}
+	font-size: calc(1.3325rem + 1.185vw); }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+		h4 {
+			font-size: var(--step-2); } }
 
 p {
-	font-size: 1rem;
 	line-height: inherit;
 	margin: 0 0 1rem;
 	max-width: 60ch;
@@ -75,4 +80,20 @@ p {
 
 ul {
 	padding: 0;
+}
+
+input {
+	border: 0;
+	padding: 1rem 1.5rem 0.75rem; }
+	input:focus,
+	input:hover {
+		box-shadow: inset 0 0 1px 1px var(--clr-grey);
+		outline: 2px solid transparent; }
+
+figure {
+	margin: 0;
+}
+
+blockquote {
+	margin: 0;
 }

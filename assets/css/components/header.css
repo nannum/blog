@@ -1,6 +1,6 @@
 /* Defines all header styles and the styles of the elements contained within */
 .header {
-	padding: var(--space4) 0 0;
+	padding-top: var(--space-4);
 }
 
 .header--homepage {
@@ -30,10 +30,10 @@
 
 .nav-link {
 	color: var(--clr-white);
-	font-family: var(--font-termina);
+	font-family: var(--font-tertiary);
 	font-weight: 500;
 	letter-spacing: 0.2rem;
-	margin-right: var(--space4);
+	margin-right: var(--space-4);
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -51,7 +51,7 @@
 	position: absolute;
 	transform: scale3d(0, 0, 0);
 	transition: transform 0.25s var(--timing-nav-link);
-	top: 1.2rem;
+	top: 1.75rem;
 	width: calc(100% - 0.2rem) }
 	.nav-link:hover::after {
 		transform: scale3d(1, 1, 1); }
@@ -59,11 +59,12 @@
 .intro {
 	animation: fade-in-up 1s 1s var(--timing-page-load) forwards;
 	color: var(--clr-white);
-	font-size: calc(1rem + 7vw);
+	font-size: var(--preferred);
+	font-weight: 700;
 	height: 80vh;
 	margin: 0;
 	opacity: 0;
 	text-align: center; }
-	@supports (font-size: clamp(3.157rem, 1rem + 7vw, 7.478rem)) {
+	@supports (clamp(1rem, 1rem + 1vw, 1rem)) {
 		.intro {
-			font-size: clamp(3.157rem, 1rem + 7vw, 7.478rem); } }
+			font-size: clamp(3.157rem, var(--preferred), 7.478rem); } }

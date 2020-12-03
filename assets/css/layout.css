@@ -1,11 +1,12 @@
 /* Divides the page into sections and defines how major components are layed out on the page */
+/* Header */
 .header--homepage {
 	align-items: start;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	justify-items: center;
-	row-gap: var(--space5); }
+	row-gap: var(--space-3); }
 	@media all and (min-width: 750px) {
 		.header--homepage {
 			align-items: center;
@@ -13,7 +14,7 @@
 				"logo nav"
 				"intro intro";
 			grid-template-columns: 1fr 1fr;
-			row-gap: var(--space2);
+			row-gap: var(--space-2);
 		}
 
 		.logo {
@@ -30,6 +31,7 @@
 			grid-area: intro;
 			justify-self: start; } }
 
+/* Card */
 .card {
 	display: flex;
 	flex-flow: column nowrap; }
@@ -62,17 +64,17 @@
 }
 
 .card-author {
-	grid-column: 3/span 4;
+	grid-column: 3/span 5;
 	grid-row: 2/3;
 }
 
 .card-date {
-	grid-column: 3/span 3;
+	grid-column: 3/span 4;
 	grid-row: 3/4;
 }
 
 .card-read-time {
-	grid-column: 3/span 3;
+	grid-column: 3/span 4;
 	grid-row: 4/5;
 }
 
@@ -82,7 +84,7 @@
 }
 
 .card-metadata {
-	grid-column: 2/span 3;
+	grid-column: 2/span 4;
 	grid-row: 6/7;
 }
 

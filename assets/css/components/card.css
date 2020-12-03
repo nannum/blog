@@ -1,7 +1,7 @@
 /* Defines all card styles and the styles of the elements contained within */
 @media all and (min-width: 1000px) {
 	.card {
-		height: 100vh; }
+		height: 75vh; }
 }
 
 .card-deck {
@@ -9,12 +9,10 @@
 }
 
 .card-title {
-	font-size: calc(1rem + 7vw);
-	font-weight: 600; }
-	@supports (font-size: clamp(3.157rem, 1rem + 7vw, 7.478rem)) {
+	font-size: var(--preferred); }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
 		.card-title {
-			font-size: clamp(2.369rem, 1rem + 4vw, 4.20rem); } }
-			/* font-size: clamp(2.369rem, 1rem + 7vw, 4.20rem); } } */
+			font-size: var(--step-3); } }
 
 .card-author-avatar {
 	border-radius: 50%;
@@ -25,7 +23,7 @@
 .card-author,
 .card-date,
 .card-read-time {
-	font-family: var(--font-termina);
+	font-family: var(--font-tertiary);
 	padding-left: 5px;
 }
 
@@ -50,7 +48,7 @@
 .card-cta .button-content {	
 	display: inline-block;
 	transition: all 0.45s var(--timing-button);
-	/* FIX for Firefox  Bug 739176 - No sub-pixel rendering while transitioning translate transforms.
+	/* FIX - Firefox Bug 739176 - No sub-pixel rendering while transitioning translate transforms.
 	Bug causes jerky transition on the button's translate.
 	See https://bugzilla.mozilla.org/show_bug.cgi?id=739176 for further info. */
 	filter: blur(0px);
@@ -80,11 +78,11 @@
 	display: flex;
 	flex-flow: row nowrap;
 	list-style: none;
-	margin: 0 0 var(--space5);
+	margin: 0 0 var(--space-5);
 }
 
 .metadata-item {
-	margin-right: var(--space4);
+	margin-right: var(--space-4);
 	font-variant-numeric: lining-nums; }
 	.metadata-item:last-child {
 		margin-right: 0; }

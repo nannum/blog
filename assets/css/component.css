@@ -1,6 +1,7 @@
 /* Defines how the reusable and modular components (e.g. navigation bars, carousels, dialogs and widgets) are layed out on the page */
 @import url(components/header.css);
 @import url(components/card.css);
+@import url(components/aside.css);
 @import url(components/article.css);
 @import url(components/footer.css);
 
@@ -96,23 +97,22 @@
 	background-color: var(--clr-gold);
 	color: var(--clr-blue);
 	display: inline-block;
-	font-family: var(--font-termina);
-	font-size: 0.75rem;
+	font-family: var(--font-tertiary);
+	font-size: var(--step--1);
 	font-weight: 500;
 	letter-spacing: 0.1rem;
-	padding: 1rem var(--space4) 0.75rem;
+	padding: 1rem 1.5rem 0.75rem;
 	transition: all 0.45s var(--timing-button);
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase; }
 	.button:hover {
-		background-color: #f7c060; }
+		background-color: var(--clr-gold-light); }
 
 .container {
-	margin: 0 auto;
-	max-width: 85rem;
-	min-width: 320px;
-	width: 90vw;
+	/* Does not use shorthand so the padding top and bottom of the elements it is applied to is not overwritten due to the cascade. */
+	padding-left: 5vw;
+	padding-right: 5vw;
 }
 
 .slide-in {
@@ -124,12 +124,16 @@
 }
 
 .text--small {
-	font-size: 0.75rem; /* Perfect 4th scale 1.333 ratio - 12px */
-}
+	font-size: calc(0.5625rem + 0.5vw); }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+		.text--small {
+			font-size: var(--step--1); } }
 
 .text--smallest {
-	font-size: 0.563rem; /* Perfect 4th scale 1.333 ratio - 9px */
-}
+	font-size: calc(0.4213rem + 0.3767vw); }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+		.text--smallest {
+			font-size: var(--step--2); } }
 
 .sr-only {
 	border: 0;
