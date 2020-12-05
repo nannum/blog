@@ -1,1 +1,44 @@
 /* Defines all aside styles and the styles of the elements contained within */
+.subscribe {
+	background-color: var(--clr-grey-light);
+	background-image: url("../../images/topo.png");
+	padding: var(--space-6) 0;
+}
+
+.privacy-promise {
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+.subscribe-form {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 40rem;
+	width: 100%;
+}
+
+.input--subscribe {
+	width: 60%; }
+	@media all and (max-width: 500px) {
+		.input--subscribe {
+			width: 100%; } }
+
+.button--subscribe {
+	border: 0; 
+	width: 40%; }
+	@media all and (max-width: 500px) {
+		.button--subscribe {
+			width: 100%; } }
+
+.quote {
+	margin: var(--space-8) 0;
+}
+
+.quote-content {
+	font-size: var(--preferred);
+	font-style: italic; 
+	font-weight: 700;
+	line-height: 1.3; }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+		.quote-content {
+			font-size: clamp(1.7769rem, var(--preferred), 4.209rem); } }

@@ -99,5 +99,40 @@
 	order: -1; }
 	@media all and (min-width: 1000px) {
 		.card-thumbnail {
-			flex-basis: 50vw; 
+			flex-basis: 50vw;
 			order: unset; } }
+
+/* Aside */
+.subscribe {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	justify-items: center;
+}
+
+.subscribe-title,
+.subscribe-cta,
+.subscribe-form,
+.quote {
+	grid-column: 2/span 6; }
+	@media all and (min-width: 1100px) {
+		.subscribe-title,
+		.subscribe-cta,
+		.subscribe-form,
+		.quote {
+			grid-column: 3/span 4; } }
+
+.subscribe-title {
+	grid-row: 1/2;
+}
+
+.subscribe-cta {
+	grid-row: 2/3;
+}
+
+.subscribe-form {
+	grid-row: 3/4;
+}
+
+.quote {
+	grid-row: 5/6;
+}
