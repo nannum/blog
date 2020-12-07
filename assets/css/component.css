@@ -123,6 +123,17 @@
 	animation: slide-out 0.45s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
 }
 
+.sr-only {
+	border: 0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
 .text--small {
 	font-size: calc(0.5625rem + 0.5vw); }
 	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
@@ -134,17 +145,6 @@
 	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
 		.text--smallest {
 			font-size: var(--step--2); } }
-
-.sr-only {
-	border: 0;
-	clip: rect(0,0,0,0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
 
 /* Support for those with Vestibular disorders */
 @media all and (prefers-reduced-motion: reduce) {

@@ -1,0 +1,45 @@
+/* Defines all footer styles and the styles of the elements contained within */
+.main-footer {
+	background-color: var(--clr-white);
+	padding-bottom: var(--space-4);}
+	.main-footer::before {
+		background-color: var(--clr-grey);
+		content: ""; 
+		height: 1px;
+		margin: var(--space-6) auto var(--space-3);
+		width: 90vw; }
+
+.social-media,
+.credits {
+	display: flex;
+	flex-flow: row wrap;
+	list-style: none;
+	margin: 0;
+}
+
+.social-media-item,
+.credits-item {
+	margin-right: var(--space-4); }
+	.social-media-item:last-child,
+	.credits-item:last-child {
+		margin-right: 0; }
+
+.social-media-item {
+	font-size: var(--step-1);
+}
+
+.social-media-link {
+	color: var(--clr-black);
+	transition: color 300ms ease-in-out; }
+	.social-media-link:hover {
+		color: var(--clr-gold); }
+
+.credits {
+	padding-right: 60px; }
+	@media all and (min-width: 970px) {
+		.credits {
+			justify-content: flex-end; } }
+
+.copyright {
+	margin: 0;
+}

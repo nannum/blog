@@ -136,3 +136,25 @@
 .quote {
 	grid-row: 5/6;
 }
+
+/* Footer */
+.main-footer {
+	align-items: flex-start;
+	display: flex;
+	flex-flow: row wrap; }
+	@media all and (max-width: 400px) {
+		.main-footer {
+			align-items: flex-start;
+			flex-flow: column nowrap; } }
+
+.social-media {
+	flex-basis: 40%;
+}
+
+.credits {
+	flex-basis: 60%;
+}
+
+.copyright {
+	flex-basis: 100%;
+}
