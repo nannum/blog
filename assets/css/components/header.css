@@ -7,6 +7,10 @@
 	min-height: 100vh;
 }
 
+.header--post {
+	background-color: var(--clr-white);
+}
+
 .logo {
 	animation: fade-in-up 1s 0.5s var(--timing-page-load) forwards;
 	display: block;
@@ -17,6 +21,10 @@
 }
 
 .logo-mark {
+	fill: var(--clr-black);
+}
+
+.header--homepage .logo-mark {
 	fill: var(--clr-white);
 }
 
@@ -29,7 +37,7 @@
 }
 
 .nav-link {
-	color: var(--clr-white);
+	color: var(--clr-black);
 	font-family: var(--font-tertiary);
 	font-weight: 500;
 	letter-spacing: 0.2rem;
@@ -37,6 +45,10 @@
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.header--homepage .nav-link {
+	color: var(--clr-white);
 }
 
 .nav-link:last-of-type {

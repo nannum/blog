@@ -31,6 +31,13 @@
 			grid-area: intro;
 			justify-self: start; } }
 
+.header--post {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
 /* Card */
 .card {
 	display: flex;
@@ -138,7 +145,7 @@
 }
 
 /* Footer */
-.main-footer {
+.footer {
 	align-items: flex-start;
 	display: flex;
 	flex-flow: row wrap; }

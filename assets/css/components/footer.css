@@ -1,8 +1,8 @@
 /* Defines all footer styles and the styles of the elements contained within */
-.main-footer {
+.footer {
 	background-color: var(--clr-white);
 	padding-bottom: var(--space-4);}
-	.main-footer::before {
+	.footer::before {
 		background-color: var(--clr-grey);
 		content: ""; 
 		height: 1px;
