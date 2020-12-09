@@ -1,14 +1,16 @@
 /* Defines all header styles and the styles of the elements contained within */
 .header {
-	padding-top: var(--space-4);
+	padding-top: var(--space-2);
 }
 
 .header--homepage {
 	min-height: 100vh;
+	padding-top: var(--space-4);
 }
 
-.header--post {
+.header--article {
 	background-color: var(--clr-white);
+	overflow: hidden;
 }
 
 .logo {
@@ -24,16 +26,21 @@
 	fill: var(--clr-black);
 }
 
-.header--homepage .logo-mark {
+.logo--homepage .logo-mark {
 	fill: var(--clr-white);
 }
 
 .nav {
 	animation: fade-in-up 1s 0.75s var(--timing-page-load) forwards;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
 	opacity: 0;
+}
+
+.nav * {
+	margin-right: var(--space-4);
+}
+
+.nav *:last-child {
+	margin-right: 0;
 }
 
 .nav-link {
@@ -41,7 +48,6 @@
 	font-family: var(--font-tertiary);
 	font-weight: 500;
 	letter-spacing: 0.2rem;
-	margin-right: var(--space-4);
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -49,10 +55,6 @@
 
 .header--homepage .nav-link {
 	color: var(--clr-white);
-}
-
-.nav-link:last-of-type {
-	margin-right: 0;
 }
 
 .nav-link::after {
@@ -63,7 +65,7 @@
 	position: absolute;
 	transform: scale3d(0, 0, 0);
 	transition: transform 0.25s var(--timing-nav-link);
-	top: 1.75rem;
+	top: 1.5rem;
 	width: calc(100% - 0.2rem) }
 	.nav-link:hover::after {
 		transform: scale3d(1, 1, 1); }

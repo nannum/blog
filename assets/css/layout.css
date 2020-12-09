@@ -31,11 +31,20 @@
 			grid-area: intro;
 			justify-self: start; } }
 
-.header--post {
+.header--article {
 	align-items: center;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: center; }
+	@media all and (min-width: 575px) {
+		.header--article {
+			justify-content: space-between; } }
+
+.nav {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 }
 
 /* Card */
