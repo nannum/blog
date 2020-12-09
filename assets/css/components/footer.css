@@ -35,7 +35,7 @@
 		color: var(--clr-gold); }
 
 .credits {
-	padding-right: 60px; }
+	padding-right: 48px; }
 	@media all and (min-width: 970px) {
 		.credits {
 			justify-content: flex-end; } }

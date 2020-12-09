@@ -5,6 +5,12 @@
 	padding: var(--space-6) 0;
 }
 
+.subscribe-title,
+.subscribe-cta,
+.subscribe-form  {
+	max-width: 640px;
+}
+
 .privacy-promise {
 	text-transform: uppercase;
 	font-style: normal;

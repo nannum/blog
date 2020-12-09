@@ -1,7 +1,7 @@
 /* Defines all card styles and the styles of the elements contained within */
 @media all and (min-width: 1000px) {
 	.card {
-		height: 75vh; }
+		height: 80vh; }
 }
 
 .card-deck {
