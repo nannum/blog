@@ -1,6 +1,6 @@
 /* Divides the page into sections and defines how major components are layed out on the page */
 /* Header */
-.header--homepage {
+.header {
 	align-items: start;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -8,11 +8,11 @@
 	justify-items: center;
 	row-gap: var(--space-3); }
 	@media all and (min-width: 750px) {
-		.header--homepage {
+		.header {
 			align-items: center;
 			grid-template-areas:
-				"logo nav"
-				"intro intro";
+			"logo nav"
+			"intro intro";
 			grid-template-columns: 1fr 1fr;
 			row-gap: var(--space-2);
 		}
@@ -27,18 +27,17 @@
 			justify-self: end;
 		}
 
-		.intro {
+		.intro,
+		.title {
 			grid-area: intro;
-			justify-self: start; } }
+		}
 
-.header--article {
-	align-items: center;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center; }
-	@media all and (min-width: 575px) {
-		.header--article {
-			justify-content: space-between; } }
+		.intro {
+			justify-self: start;
+		}
+
+		.title {
+			justify-self: center; } }
 
 .nav {
 	align-items: center;

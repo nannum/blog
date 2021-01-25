@@ -1,1 +1,4 @@
-/* Defaults that define how elements should look in all occurrences */
+/* Defines all article styles and the styles of the elements contained within */
+.article {
+	background-color: var(--clr-white);
+}
