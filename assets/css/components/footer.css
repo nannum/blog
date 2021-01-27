@@ -13,8 +13,31 @@
 .credits {
 	display: flex;
 	flex-flow: row wrap;
+	flex-basis: 100%;
 	list-style: none;
 	margin: 0;
+}
+
+@media all and (min-width: 500px) {
+	.social-media {
+		flex-basis: 40%; } 
+}
+
+.credits {
+	flex-flow: column nowrap; }
+	@media all and (min-width: 500px) {
+		.credits {
+			flex-basis: 60%;
+			flex-flow: row wrap; } }
+
+.copyright {
+	flex-basis: 100%;
+}
+
+@media all and (max-width: 499px) {
+	.credits {
+		line-height: 3;
+		margin: var(--space-3) 0; } 
 }
 
 .social-media-item,

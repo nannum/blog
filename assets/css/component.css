@@ -92,6 +92,28 @@
 	animation: slide-up-back 0.60s 0.25s var(--timing-skip-link);
 }
 
+.author-avatar {
+	border-radius: 50%;
+	height: 72px;
+	width: 72px;
+}
+
+.author,
+.date,
+.read-time {
+	font-family: var(--font-tertiary);
+}
+
+.author {
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.date,
+.read-time {
+	color: var(--clr-grey);
+}
+
 /* Utility Classes */
 .button {
 	background-color: var(--clr-gold);
