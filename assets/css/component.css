@@ -5,6 +5,10 @@
 @import url(components/article.css);
 @import url(components/footer.css);
 
+.homepage {
+	background-color: var(--clr-black); 
+}
+
 .homepage::before {
 	animation: scale-in 0.7s 0.45s var(--timing-page-load) forwards;
 	background-attachment: fixed, fixed;

@@ -10,34 +10,38 @@
 	@media all and (min-width: 750px) {
 		.header {
 			align-items: center;
-			grid-template-areas:
-			"logo nav"
-			"intro intro";
 			grid-template-columns: 1fr 1fr;
 			row-gap: var(--space-2);
 		}
 
+		.homepage .header {
+			grid-template-areas:
+			"logo nav"
+			"intro intro";
+		}
+
 		.logo {
-			grid-area: logo;
 			justify-self: start;
 		}
 
+		.homepage .logo {
+			grid-area: logo;
+		}
+
 		.nav {
-			grid-area: nav;
 			justify-self: end;
 		}
 
-		.intro,
-		.title {
-			grid-area: intro;
+		.homepage .nav {
+			grid-area: nav;
 		}
 
 		.intro {
 			justify-self: start;
 		}
 
-		.title {
-			justify-self: center; } }
+		.homepage .intro {
+			grid-area: intro; } }
 
 .nav {
 	align-items: center;

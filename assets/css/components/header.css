@@ -1,17 +1,10 @@
 /* Defines all header styles and the styles of the elements contained within */
 .header {
-	min-height: 70vh;
 	padding-top: var(--space-4);
 }
 
-.header--homepage {
+.homepage .header {
 	min-height: 100vh;
-}
-
-.rm {
-	background-image: url("../../images/benjamin-voros.jpg");
-	background-position: center bottom 60%;
-	background-size: cover;
 }
 
 .logo {
@@ -23,8 +16,12 @@
 	opacity: 0;
 }
 
-.logo-mark {
+.homepage .logo-mark {
 	fill: var(--clr-white);
+}
+
+.logo-mark {
+	fill: var(--clr-black);
 }
 
 .nav {
@@ -41,13 +38,17 @@
 }
 
 .nav-link {
-	color: var(--clr-white);
+	color: var(--clr-black);
 	font-family: var(--font-tertiary);
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.homepage .nav-link {
+	color: var(--clr-white);
 }
 
 .nav-link::after {
@@ -69,20 +70,9 @@
 	font-size: var(--preferred);
 	font-weight: 700;
 	height: 80vh;
-	margin: 0;
+	margin: var(--space-6) 0 0;
 	opacity: 0;
 	text-align: center; }
 	@supports (clamp(1rem, 1rem + 1vw, 1rem)) {
 		.intro {
 			font-size: clamp(3.157rem, var(--preferred), 7.478rem); } }
-
-.title {
-	color: var(--clr-white);
-	height: 45vh;
-	text-align: center;
-}
-
-.intro,
-.title {
-	margin: var(--space-6) 0 0;
-}

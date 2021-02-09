@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	background-color: var(--clr-black);
+	background-color: var(--clr-grey-light);
 	font-family: var(--font-primary);
 	font-size: calc(0.75rem + 0.6667vw);
 	height: 100vh;
