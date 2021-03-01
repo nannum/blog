@@ -113,9 +113,22 @@
 	text-transform: uppercase;
 }
 
-.date,
-.read-time {
-	color: var(--clr-grey);
+.stats {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	list-style: none;
+	margin: 0 0 var(--space-5);
+}
+
+.stat {
+	margin-right: var(--space-4);
+	font-variant-numeric: lining-nums; }
+	.stat:last-child {
+		margin-right: 0; }
+
+.stat .far {
+	color: var(--clr-gold);
 }
 
 /* Utility Classes */
@@ -191,6 +204,4 @@
 
 	.skip-link--top:hover .icon--chevron-down,
 	.skip-link--bottom:hover .icon--chevron-up {
-		animation-name: none;
-	}
-}
+		animation-name: none; } }

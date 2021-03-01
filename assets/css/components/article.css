@@ -1,1 +1,25 @@
 /* Defines all article styles and the styles of the elements contained within */
+.article-title {
+	font-size: var(--preferred);
+	margin: var(--space-6) 0 var(--space-4) 0;
+	text-align: center; }
+	@supports (clamp(1rem, 1rem + 1vw, 1rem)) {
+		.intro {
+			font-size: clamp(3.157rem, var(--preferred), 7.478rem); } }
+
+.article .author-avatar {
+	height: 64px;
+	margin-right: var(--space-1);
+	width: 64px;
+}
+
+.article-title,
+.hero-image {
+	animation: fade-in-up 1s 1s var(--timing-page-load) forwards;
+	opacity: 0;
+}
+
+.article .date {
+	flex-grow: 2;
+	text-align: right;
+}
