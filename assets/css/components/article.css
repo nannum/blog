@@ -7,6 +7,19 @@
 		.intro {
 			font-size: clamp(3.157rem, var(--preferred), 7.478rem); } }
 
+.article .metadata {
+	margin: var(--space-5) 0 var(--space-4);
+}
+
+.article .metadata::after {
+	background-color: var(--clr-black);
+	content: "";
+	height: 1px;
+	margin-top: var(--space-3);
+	margin-top: var(--space-2);
+	width: 100%;
+}
+
 .article .author-avatar {
 	height: 64px;
 	margin-right: var(--space-1);
