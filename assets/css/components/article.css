@@ -36,3 +36,18 @@
 	flex-grow: 2;
 	text-align: right;
 }
+
+.article p:first-of-type::first-letter {
+	float: left;
+	font-size: 6rem;
+	line-height: 0.65;
+	margin: 0.1em 0.1em 0.2em 0;
+}
+
+.article h2 {
+	text-align: center;
+}
+
+.article p {
+	margin: 0 auto;
+}
