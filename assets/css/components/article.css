@@ -41,6 +41,7 @@
 	float: left;
 	font-size: 4rem;
 	font-weight: 600;
+	line-height: 0.5;
 	margin: 0.6rem 0.4rem 0 0; }
 		@media all and (min-width: 760px) {
 		.article p:first-of-type::first-letter {
