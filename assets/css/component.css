@@ -165,6 +165,7 @@
 .sr-only {
 	border: 0;
 	clip: rect(0,0,0,0);
+	clip-path: inset(50%);
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
@@ -185,6 +186,16 @@
 		.text--smallest {
 			font-size: var(--step--2); } }
 
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
+}
+
 /* Support for those with Vestibular disorders */
 @media all and (prefers-reduced-motion: reduce) {
 	.homepage::before,
@@ -204,4 +215,6 @@
 
 	.skip-link--top:hover .icon--chevron-down,
 	.skip-link--bottom:hover .icon--chevron-up {
-		animation-name: none; } }
+		animation-name: none;
+	}
+}

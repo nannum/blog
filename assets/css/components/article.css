@@ -39,10 +39,12 @@
 
 .article p:first-of-type::first-letter {
 	float: left;
-	font-size: 6rem;
-	line-height: 0.65;
-	margin: 0.1em 0.1em 0.2em 0;
-}
+	font-size: 4rem;
+	font-weight: 600;
+	margin: 0.6rem 0.4rem 0 0; }
+		@media all and (min-width: 760px) {
+		.article p:first-of-type::first-letter {
+			font-size: 5rem; } }
 
 .article h2 {
 	text-align: center;
@@ -51,3 +53,62 @@
 .article p {
 	margin: 0 auto;
 }
+
+.breadcrumbs {
+	margin: var(--space-6) auto;
+	max-width: 75ch;
+}
+
+.breadcrumb {
+	background-color: var(--clr-white);
+	border: 1px solid var(--clr-white);
+	color: var(--clr-black);
+	flex-basis: 50%;
+	margin-bottom: var(--space-2);
+	padding: var(--space-4);
+	transition: all 0.25s ease-in-out; }
+	@media all and (min-width: 650px) {
+		.breadcrumb {
+			margin-bottom: 0; } }
+
+.breadcrumb:hover {
+	background-color: var(--clr-grey-light);
+	border-color: var(--clr-grey);
+}
+
+.breadcrumb:last-of-type {
+	margin-bottom: 0;
+}
+
+.breadcrumb-icon {
+	transition: all 0.25s ease-in-out;
+}
+
+.breadcrumb:hover.breadcrumb--previous .breadcrumb-icon {
+	transform: translate3d(-0.25rem, 0, 1px);
+}
+
+.breadcrumb:hover.breadcrumb--next .breadcrumb-icon {
+	transform: translate3d(0.25rem, 0, 1px);
+}
+
+.breadcrumb-type {
+	font-family: var(--font-secondary);
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	text-transform: uppercase; }
+	@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+		.breadcrumb-type {
+			font-size: var(--step-0); } }
+
+@supports (font-size: clamp(1rem, 1rem + 7vw, 1rem)) {
+	.breadcrumb-title {
+		font-size: var(--step-1); } }
+
+.breadcrumb-type,
+.breadcrumb-title {
+	text-align: center; }
+	@media all and (min-width: 700px) {
+		.breadcrumb-type,
+		.breadcrumb-title {
+			text-align: left; } }
