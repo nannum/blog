@@ -15,7 +15,6 @@
 	background-color: var(--clr-black);
 	content: "";
 	height: 1px;
-	margin-top: var(--space-3);
 	margin-top: var(--space-2);
 	width: 100%;
 }
@@ -57,24 +56,21 @@
 
 .breadcrumbs {
 	margin: var(--space-6) auto;
-	max-width: 75ch;
 }
 
 .breadcrumb {
-	background-color: var(--clr-white);
-	border: 1px solid var(--clr-white);
+	border-bottom: 1px solid var(--clr-grey);
+	border-top: 1px solid var(--clr-grey);
 	color: var(--clr-black);
-	flex-basis: 50%;
 	margin-bottom: var(--space-2);
-	padding: var(--space-4);
+	padding: var(--space-6) 0;
 	transition: all 0.25s ease-in-out; }
 	@media all and (min-width: 650px) {
 		.breadcrumb {
 			margin-bottom: 0; } }
 
 .breadcrumb:hover {
-	background-color: var(--clr-grey-light);
-	border-color: var(--clr-grey);
+	border-color: var(--clr-grey-light);
 }
 
 .breadcrumb:last-of-type {
@@ -83,14 +79,6 @@
 
 .breadcrumb-icon {
 	transition: all 0.25s ease-in-out;
-}
-
-.breadcrumb:hover.breadcrumb--previous .breadcrumb-icon {
-	transform: translate3d(-0.25rem, 0, 1px);
-}
-
-.breadcrumb:hover.breadcrumb--next .breadcrumb-icon {
-	transform: translate3d(0.25rem, 0, 1px);
 }
 
 .breadcrumb-type {
@@ -108,8 +96,25 @@
 
 .breadcrumb-type,
 .breadcrumb-title {
-	text-align: center; }
+	text-align: center;
+	transition: all 0.25s ease-in-out; }
 	@media all and (min-width: 700px) {
-		.breadcrumb-type,
-		.breadcrumb-title {
-			text-align: left; } }
+		.breadcrumb--previous .breadcrumb-type,
+		.breadcrumb--previous .breadcrumb-title {
+			text-align: left; }
+
+		.breadcrumb--next .breadcrumb-type,
+		.breadcrumb--next .breadcrumb-title {
+			text-align: right; } }
+
+.breadcrumb:hover.breadcrumb--previous .breadcrumb-icon,
+.breadcrumb:hover.breadcrumb--next .breadcrumb-type,
+.breadcrumb:hover.breadcrumb--next .breadcrumb-title {
+	transform: translate3d(-0.5rem, 0, 1px);
+}
+
+.breadcrumb:hover.breadcrumb--next .breadcrumb-icon,
+.breadcrumb:hover.breadcrumb--previous .breadcrumb-type,
+.breadcrumb:hover.breadcrumb--previous .breadcrumb-title {
+	transform: translate3d(0.5rem, 0, 1px);
+}
