@@ -46,12 +46,14 @@
 		.article p:first-of-type::first-letter {
 			font-size: 5rem; } }
 
-.article h2 {
+.article h2,
+.article h3 {
 	text-align: center;
 }
 
-.article p {
-	margin: 0 auto;
+.article p,
+.article ul {
+	margin: 0 auto var(--space-3);
 }
 
 .breadcrumbs {
