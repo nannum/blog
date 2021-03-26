@@ -16,7 +16,6 @@ Utilize semantic HTML and CSS to build a personal blog website, including custom
 
 ## Resources:
 Icons by [Font Awesome](https://fontawesome.com/)  
-[normalize.css](https://github.com/necolas/normalize.css/) by [Nicolas Gallagher](http://nicolasgallagher.com/)
 
 ## Credits:
 
@@ -50,8 +49,6 @@ All content taken from [Wikitravel](https://wikitravel.org/en/Main_Page)
 ## License:
 
 - Travel Blog Project is licensed under [CC BY](https://creativecommons.org/licenses/by/3.0/)
-- Normalize.css is licensed under the [MIT license](https://opensource.org/licenses/MIT)
-- Animate.css is licensed under the [MIT license](https://opensource.org/licenses/MIT)
 - All text is [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/legalcode)
 - The license for images can be found here: [https://unsplash.com/license](https://unsplash.com/license)
 - The license for icons can be found here: [https://fontawesome.com/license/free](https://fontawesome.com/license/free)
